@@ -1,0 +1,37 @@
+from functools import lru_cache
+
+from sentence_transformers import SentenceTransformer
+
+from app.core.config import settings
+
+
+@lru_cache(maxsize=1)
+def get_embedding_model() -> SentenceTransformer:
+    return SentenceTransformer(
+        settings.embedding_model
+    )
+
+
+def embed_texts(
+    texts: list[str],
+) -> list[list[float]]:
+    if not texts:
+        return []
+
+    model = get_embedding_model()
+
+    embeddings = model.encode(
+        texts,
+        normalize_embeddings=True,
+    )
+
+    return embeddings.tolist()
+
+
+def embed_query(
+    query: str,
+) -> list[float]:
+    if not query.strip():
+        raise ValueError("Query cannot be empty.")
+
+    return embed_texts([query])[0]

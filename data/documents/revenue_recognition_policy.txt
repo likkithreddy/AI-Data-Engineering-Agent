@@ -1,0 +1,9 @@
+Revenue Recognition Policy
+
+Recognized revenue only includes completed orders.
+
+Revenue is calculated as:
+
+quantity * unit_price * (1 - discount)
+
+Orders with pending or cancelled status are not included in recognized revenue.
