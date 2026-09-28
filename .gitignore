@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+
+# Local databases and generated runtime data
+chroma_data/
+backend/chroma_data/
+*.sqlite3
+*.db
+*.db-journal
+*.log
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Node / frontend build artifacts
+node_modules/
+frontend/node_modules/
+dist/
+build/
+frontend/dist/
+frontend/.vite/
+
+# Test / tooling artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage/
+
+# Misc
+*.tmp
+*.bak
+*.swp

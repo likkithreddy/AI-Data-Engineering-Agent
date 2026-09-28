@@ -1,0 +1,37 @@
+# API
+fastapi
+uvicorn
+
+# Configuration & validation
+pydantic
+pydantic-settings
+python-dotenv
+
+# Database
+sqlalchemy
+psycopg[binary]
+alembic
+
+# Agent / LLM
+langchain
+langgraph
+langchain-google-genai
+
+# Data analysis
+pandas
+numpy
+
+# SQL safety / parsing
+sqlglot
+
+# RAG
+chromadb
+sentence-transformers
+
+# Testing
+pytest
+httpx
+
+# Development / quality
+ruff
+mypy
